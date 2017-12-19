@@ -4,15 +4,13 @@ import {
 } from 'Constants/';
 
 
-const initialState = Immutable.Map({
-  data: undefined,
-});
+const initialState = Immutable.Map({});
 
 
 export default function dataReducer(state = initialState, action) {
   switch (action.type) {
     case GET_DATA:
-      return state.set('data', Immutable.fromJS(action.payload));
+      return action.payload;
     default:
       return state;
   }

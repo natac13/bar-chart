@@ -11,13 +11,15 @@ import Main from 'Components/Main/';
 class App extends PureComponent {
   constructor(props) {
     super(props);
+    this.props.actions.getData();
 
-    props.actions.getData();
+  }
+  componentWillMount() {
+
   }
 
   render() {
     const { appName, actions, error, children } = this.props;
-    console.log('app children', children)
     return (
       <div>
         <NavBar actions={actions} appName={appName} />

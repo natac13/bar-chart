@@ -32,10 +32,7 @@ export default ({ dispatch, getState }) => (next) => (action) => {
   if (typeof callAPI === 'undefined') {
     return next(action);
   }
-console.log('action', action)
   const { type } = action;
-console.log('action', action)
-console.log('type', type)
 /* ====================================
   =            Source Data            =
 =====================================*/
@@ -43,8 +40,16 @@ console.log('type', type)
   if (type === GET_DATA) {
     const fetchPromise = fetch();
     return fetchPromise.then((response) => {
-      console.log('action', action)
-      return next(actionWith(action, { payload: response }));
+      const payload = {
+        column_names: response.column_names,
+        data: response.data,
+        description: response.description,
+        frequency: response.frequency,
+        from_date: response.from_date,
+        to_date: response.to_date,
+        name: response.name.split(',')[0],
+      }
+      return next(actionWith(action, { payload }));
     });
   }
 

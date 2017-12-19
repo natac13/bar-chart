@@ -64,6 +64,8 @@ module.exports = {
               options: {
                 modules: true,
                 sourceMap: true,
+                camelCase: true,
+                localIdentName: '[local]__[hash:base64:13]',
               },
             },
             { loader: 'postcss-loader', options: { sourceMap: true } },

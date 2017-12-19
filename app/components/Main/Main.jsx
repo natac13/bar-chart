@@ -3,14 +3,17 @@ import PropTypes from 'prop-types';
 import ImmutablePropTypes from 'react-immutable-proptypes';
 import classnames from 'classnames';
 
+import DataWrapper from 'Components/DataWrapper/';
+
 import style from './style.scss';
 
 function Main(props) {
   const {
     actions,
-
+    data,
   } = props;
-  console.log('main Props', props);
+
+
 
   const wrapperClass = classnames({
     [style.wrapper]: true,
@@ -18,7 +21,10 @@ function Main(props) {
 
   return (
     <div className={wrapperClass}>
-        Hello!!!
+        <DataWrapper
+          actions={actions}
+          data={data}
+        />
     </div>
   );
 }
@@ -27,7 +33,7 @@ function Main(props) {
 Main.propTypes = {
   appName: PropTypes.string,
   actions: PropTypes.object,
-
+  data: ImmutablePropTypes.map,
 };
 
 export default Main;
