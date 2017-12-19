@@ -1,0 +1,47 @@
+.svg {
+  overflow: visible !important;
+}
+
+.chart {
+  position: relative;
+}
+
+.x-axis, .y-axis {
+  font: 16px Arial sans-serif;
+}
+
+.x-legend, .y-legend{
+  font-size: 1em;
+  font-weight: 800;
+}
+
+.tooltip {
+  position: absolute;
+  text-align: left;
+  width: auto;
+  height: auto;
+  padding: 3px 5px 3px 5px;
+  font: 1em sans-serif;
+  border: 0px;
+  border-radius: 5px;
+  pointer-events: none;
+  box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2);
+  background-color: #FF8080;
+}
+
+.fiat {
+  font-weight: 800;
+}
+
+.bar {
+  fill: #468046;
+  transition: fill 800ms ease;
+}
+
+.bar-over {
+  fill: #77D977;
+}
+
+.popup {
+  display: inherit;
+}
