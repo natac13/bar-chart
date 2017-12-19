@@ -1,6 +1,6 @@
 {
   "name": "barchart",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "Visualise Data Using D3.js and a Bar chart Free Code Camp Project",
   "main": "build/index.js",
   "scripts": {
@@ -12,7 +12,7 @@
     "build:app": "webpack -p --config ./webpack.production.config.js --progress --color",
     "copyFavicon": "cp favicon.ico ./build/favicon.ico",
     "deploy": "rimraf docs/ && cp -r build/ docs/",
-    "build": "cross-env NODE_ENV=production npm run build:app && npm run build:server && npm run copyFavicon",
+    "build": "cross-env NODE_ENV=production npm run build:app && npm run copyFavicon",
     "predeploy": "npm run build",
     "lint": "eslint app/",
     "start-production": "pm2 start -i 2 --name='GameOfLife' build/production.server.bundle.js",

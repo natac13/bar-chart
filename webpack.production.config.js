@@ -17,7 +17,7 @@ module.exports = {
   devtool: 'source-map',
   entry: [
     // sets up an ES6-ish environment with promise support
-    // 'babel-polyfill', //do not need here as in the webpack.server.js file
+    'babel-polyfill', //do not need here as in the webpack.server.js file
     // the main application script
     ENTRY_PATH,
   ],
