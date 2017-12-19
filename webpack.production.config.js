@@ -9,7 +9,7 @@ const extractSass = new ExtractTextPlugin({
   filename: 'style.css',
 });
 
-const BUILD_PATH = path.join(__dirname, 'docs');
+const BUILD_PATH = path.join(__dirname, 'build');
 const ENTRY_PATH = path.join(__dirname, 'app', 'index.js');
 
 module.exports = {
@@ -59,6 +59,8 @@ module.exports = {
               options: {
                 modules: true,
                 sourceMap: true,
+                camelCase: true,
+                localIdentName: '[local]__[hash:base64:13]',
               },
             },
             { loader: 'postcss-loader', options: { sourceMap: true } },
