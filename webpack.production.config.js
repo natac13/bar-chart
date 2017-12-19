@@ -9,7 +9,7 @@ const extractSass = new ExtractTextPlugin({
   filename: 'style.css',
 });
 
-const BUILD_PATH = path.join(__dirname, 'build');
+const BUILD_PATH = path.join(__dirname, 'docs');
 const ENTRY_PATH = path.join(__dirname, 'app', 'index.js');
 
 module.exports = {
